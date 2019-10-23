@@ -68,7 +68,7 @@ namespace Sharpmake
       <GenerateXMLDocumentationFiles>[options.GenerateXMLDocumentation]</GenerateXMLDocumentationFiles>
       <BrowseInformation>false</BrowseInformation>
       <CallingConvention>[options.CallingConvention]</CallingConvention>
-      <CompileAs>Default</CompileAs>
+      <CompileAs>[options.CompileAs]</CompileAs>
       <DisableSpecificWarnings>[options.DisableSpecificWarnings]</DisableSpecificWarnings>
       <UndefinePreprocessorDefinitions>[options.UndefinePreprocessorDefinitions]</UndefinePreprocessorDefinitions>
       <AdditionalOptions>[options.AdditionalCompilerOptions]</AdditionalOptions>

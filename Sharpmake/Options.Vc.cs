@@ -552,6 +552,13 @@ namespace Sharpmake
                     Enabled,
                     Disabled
                 }
+
+                public enum CompileAs
+                {
+                    [Default]
+                    Cpp,
+                    C
+                }
             }
 
             public static class CodeAnalysis

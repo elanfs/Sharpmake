@@ -918,7 +918,14 @@ namespace Sharpmake.Generators.VisualStudio
             Options.Option(Options.Vc.Compiler.SpectreMitigation.Enabled, () => { context.Options["SpectreMitigation"] = "Spectre"; context.CommandLineOptions["SpectreMitigation"] = "/Qspectre"; }),
             Options.Option(Options.Vc.Compiler.SpectreMitigation.Disabled, () => { context.Options["SpectreMitigation"] = "false"; context.CommandLineOptions["SpectreMitigation"] = FileGeneratorUtilities.RemoveLineTag; })
             );
-
+            //Options.Vc.Compiler.CompileAs.
+            //    Cpp                                   CompileAs="Default"                          /TP
+            //    C                                     CompileAs="C"                          /TC
+            context.SelectOption
+            (
+            Options.Option(Options.Vc.Compiler.CompileAs.Cpp, () => { context.Options["CompileAs"] = "Default"; }),
+            Options.Option(Options.Vc.Compiler.CompileAs.C, () => { context.Options["CompileAs"] = "CompileAsC"; })
+            );
             if (context.DevelopmentEnvironment == DevEnv.vs2017 || context.DevelopmentEnvironment == DevEnv.vs2019)
             {
                 //Options.Vc.Compiler.DefineCPlusPlus. See: https://devblogs.microsoft.com/cppblog/msvc-now-correctly-reports-__cplusplus/
