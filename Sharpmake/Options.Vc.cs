@@ -532,6 +532,13 @@ namespace Sharpmake
                     [Default] // The actual default for VS is Yes, but this will not work for old VS versions.
                     No
                 }
+
+                public enum CompileAs
+                {
+                    [Default]
+                    Cpp,
+                    C
+                }
             }
 
             public static class CodeAnalysis
