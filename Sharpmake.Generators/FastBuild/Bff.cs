@@ -295,7 +295,7 @@ namespace Sharpmake.Generators.FastBuild
                         string fastBuildCompilerInputPattern = UtilityMethods.FBuildCollectionFormat(fastBuildCompilerInputPatternTransformedList, 32);
 
                         string fastBuildPrecompiledSourceFile = FileGeneratorUtilities.RemoveLineTag;
-                        string fastBuildCompileAsC = FileGeneratorUtilities.RemoveLineTag;
+                        string fastBuildCompileAsC = conf.Options.Contains(Options.Vc.Compiler.CompileAs.C) ? "/TC" : FileGeneratorUtilities.RemoveLineTag;
                         string fastBuildUnityName = isUnity ? GetUnityName(conf) : null;
 
                         string previousExceptionSettings = confCmdLineOptions["ExceptionHandling"];
